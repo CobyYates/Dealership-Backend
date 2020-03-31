@@ -1,9 +1,9 @@
 import { objectType } from "nexus";
 
 const Vehicle = objectType({
-  name: "Course",
+  name: "Vehicle",
   definition(t) {
-    t.model.id();
+    t.model.id(); 
     t.model.createdAt();
     t.model.updatedAt();
     t.model.make()

@@ -1,31 +1,38 @@
 import { PrismaClient } from "@prisma/client";
+import fs from 'fs'
 
 const prismaClient = new PrismaClient();
 
-async function createVehicle() {
-  try {
-    await prismaClient.vehicle.create({
+const all_vehicles = fs.readFileSync('prisma/cars.json')
+
+function loadVehicles() {
+  const vehicle = JSON.parse(all_vehicles)
+  const allVehicles = vehicle.vehicle
+  return allVehicles.map(vhcls => {
+    return {
       data: {
-        make: "McLaren",
-        model: "P1",
-        year: "2015",
-        price: "1150000",
-        power: "903",
-        torque: "664",
-        engine: "V8",
-        sixty: "2.7",
-        topSpeed: "217",
-        weight: "3411"
-      }
-    });
-  } catch (err) {
-    console.log(err);
-  }
+        make: vhcls.make,
+        model: vhcls.model,
+        year: vhcls.year,
+        topSpeed: vhcls.top_speed,
+        power: vhcls.power,
+        weight: vhcls.weight,
+        engine: vhcls.engine,
+        torque: vhcls.torque,
+        sixty: vhcls.sixty,
+        price: vhcls.price,
+      },
+    }
+  })
 }
 
 async function main() {
   try {
-    await createVehicle();
+    const allVehicles = loadVehicles()
+    for (let vhcls of allVehicles) {
+      await prismaClient.vehicle.create(vhcls)
+      .catch(err => console.log(`Error trying to add: ${err} vehicle ${vhcls}`))
+    }
   } catch (err) {
     console.log(err);
   }

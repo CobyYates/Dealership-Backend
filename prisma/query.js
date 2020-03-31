@@ -6,10 +6,10 @@ export const Query = queryType({
       type: "Vehicle",
       nullable: true,
       args: { id: idArg() },
-      resolve: (parent, { id }, ctx) => {
+      resolve: (parent, { make }, ctx) => {
         return ctx.prisma.vehicle.findOne({
           where: {
-            id
+            make
           }
         });
       }
@@ -25,11 +25,26 @@ export const Query = queryType({
           where: {
             OR: [
               { make: { contains: searchString } },
-            //   { description: { contains: searchString } }
             ]
           }
         });
       }
     });
+
+    // for finding Trucks, Cars, SUV's
+    t.list.field('Vehicles', {
+      type: 'Vehicle',
+      args: {
+        searchString: stringArg({ nullable: true }),
+      },
+      resolve: (parent, { searchString }, ctx) => {
+        return ctx.prisma.vehicle.findMany({
+          where: {
+            OR: [{ type: { contains: searchString } }],
+          },
+        })
+      },
+    })
+
   }
 });
