@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dealership Backend
 ### Project By Coby Yates
 
@@ -42,6 +41,3 @@
 ```js
 
 ```
-=======
-# Dealership-Backend
->>>>>>> 2bc616f4729dd0121abfbbab4e04bd300b97e88c
