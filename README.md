@@ -51,7 +51,7 @@ Open the following in your browser
 
 ### Docker-based PostgreSQL, MySQL, or MongoDB as your data store
 
-One of the scripts specified in the [package.json]('./package.json') file is:
+One of the scripts specified in the [package.json](./package.json) file is:
 ```javascript
 "launchDocker": "docker run --name pg-docker"
 ```
@@ -147,11 +147,11 @@ export const Mutation = mutationType({
 ### Your datastore will contain at least 25 items
 
 The original data is pulled from a cars.json file to seed the database with data
-- [Resource File]('./prisma/cars.json')
+- [Resource File](./prisma/cars.json)
 
 ### Your app will be deployable locally using Docker and will have seed data entered into the datastore.
 
-One of the scripts specified in the [package.json]('./package.json) file is:
+One of the scripts specified in the [package.json](./package.json) file is:
 ```javascript
 "seed": "node -r esm prisma/seed"
 ```
