@@ -1,5 +1,9 @@
 # Dealership GraphQL Backend
 
+<span class="iconify" data-icon="mdi-graphql" data-inline="false"></span>
+
+<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
+
 ### Project By Coby Yates
 
 This example shows how to implement a **GraphQL server with JavaScript (Node.js)** based on  [Prisma Client](https://github.com/prisma/prisma2/blob/master/docs/prisma-client-js/api.md), [apollo-server](https://www.apollographql.com/docs/apollo-server/), PostgreSQL, and [GraphQL Nexus](https://nexus.js.org/). 
@@ -10,26 +14,36 @@ This example shows how to implement a **GraphQL server with JavaScript (Node.js)
 
 Install npm dependencies:
 
-```
+```javascript
 cd into project
 npm install
 ```
 
 ### 2. Run each npm script in package.json
 
-```
-npm run launchDocker
-npm run createDB
-npm run generate
-npm run postinstall
-npm run seed
-npm run dev
-```
+| Scripts               |
+| --------------------- |
+| npm run launchDocker  |
+| npm run createDB      |
+| npm run generate      |
+| npm run postinstall   |
+| npm run seed          |
+| npm run dev           |
+
 In another terminal tab run
 
-```
+```javascript
 npm run start
 ```
+
+#### To view your Prisma Studio and GraphQL
+
+Open the following in your browser
+
+| Resource              | URL               |
+| ----------------------|:-----------------:|
+| **Prisma Studio**     | localhost:5555    |
+| **GraphQL Playground**| localhost:4000    |
 
 ### Prisma as your data modeling tool
 
