@@ -19,6 +19,38 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  VehicleCreateInput: { // input type
+    createdAt?: any | null; // DateTime
+    engine: string; // String!
+    id?: string | null; // String
+    make: string; // String!
+    model: string; // String!
+    power: string; // String!
+    price: string; // String!
+    sixty: string; // String!
+    topSpeed: string; // String!
+    torque: string; // String!
+    updatedAt?: any | null; // DateTime
+    vtype: string; // String!
+    weight: string; // String!
+    year: string; // String!
+  }
+  VehicleUpdateInput: { // input type
+    createdAt?: any | null; // DateTime
+    engine?: string | null; // String
+    id?: string | null; // String
+    make?: string | null; // String
+    model?: string | null; // String
+    power?: string | null; // String
+    price?: string | null; // String
+    sixty?: string | null; // String
+    topSpeed?: string | null; // String
+    torque?: string | null; // String
+    updatedAt?: any | null; // DateTime
+    vtype?: string | null; // String
+    weight?: string | null; // String
+    year?: string | null; // String
+  }
   VehicleWhereUniqueInput: { // input type
     id?: string | null; // String
   }
@@ -40,14 +72,16 @@ export interface NexusGenRootTypes {
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  VehicleCreateInput: NexusGenInputs['VehicleCreateInput'];
+  VehicleUpdateInput: NexusGenInputs['VehicleUpdateInput'];
   VehicleWhereUniqueInput: NexusGenInputs['VehicleWhereUniqueInput'];
 }
 
 export interface NexusGenFieldTypes {
   Mutation: { // field return type
-    createVehicle: NexusGenRootTypes['Vehicle']; // Vehicle!
+    createOneVehicle: NexusGenRootTypes['Vehicle']; // Vehicle!
     deleteOneVehicle: NexusGenRootTypes['Vehicle'] | null; // Vehicle
-    updateVehicle: NexusGenRootTypes['Vehicle']; // Vehicle!
+    updateOneVehicle: NexusGenRootTypes['Vehicle'] | null; // Vehicle
   }
   Query: { // field return type
     Vehicle: NexusGenRootTypes['Vehicle'] | null; // Vehicle
@@ -65,6 +99,7 @@ export interface NexusGenFieldTypes {
     topSpeed: string; // String!
     torque: string; // String!
     updatedAt: any; // DateTime!
+    vtype: string; // String!
     weight: string; // String!
     year: string; // String!
   }
@@ -72,33 +107,15 @@ export interface NexusGenFieldTypes {
 
 export interface NexusGenArgTypes {
   Mutation: {
-    createVehicle: { // args
-      engine?: string | null; // String
-      make: string; // String!
-      model: string; // String!
-      power?: string | null; // String
-      price?: string | null; // String
-      sixty?: string | null; // String
-      topSpeed?: string | null; // String
-      torque?: string | null; // String
-      weight?: string | null; // String
-      year: string; // String!
+    createOneVehicle: { // args
+      data: NexusGenInputs['VehicleCreateInput']; // VehicleCreateInput!
     }
     deleteOneVehicle: { // args
       where: NexusGenInputs['VehicleWhereUniqueInput']; // VehicleWhereUniqueInput!
     }
-    updateVehicle: { // args
-      engine?: string | null; // String
-      id?: string | null; // ID
-      make?: string | null; // String
-      model?: string | null; // String
-      power?: string | null; // String
-      price?: string | null; // String
-      sixty?: string | null; // String
-      topSpeed?: string | null; // String
-      torque?: string | null; // String
-      weight?: string | null; // String
-      year?: string | null; // String
+    updateOneVehicle: { // args
+      data: NexusGenInputs['VehicleUpdateInput']; // VehicleUpdateInput!
+      where: NexusGenInputs['VehicleWhereUniqueInput']; // VehicleWhereUniqueInput!
     }
   }
   Query: {
@@ -118,7 +135,7 @@ export interface NexusGenInheritedFields {}
 
 export type NexusGenObjectNames = "Mutation" | "Query" | "Vehicle";
 
-export type NexusGenInputNames = "VehicleWhereUniqueInput";
+export type NexusGenInputNames = "VehicleCreateInput" | "VehicleUpdateInput" | "VehicleWhereUniqueInput";
 
 export type NexusGenEnumNames = never;
 

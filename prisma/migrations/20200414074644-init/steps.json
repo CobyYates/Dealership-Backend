@@ -189,6 +189,13 @@
       "field": "weight",
       "type": "String",
       "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Vehicle",
+      "field": "vtype",
+      "type": "String",
+      "arity": "Required"
     }
   ]
 }

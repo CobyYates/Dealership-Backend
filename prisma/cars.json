@@ -1,6 +1,6 @@
 {
     "vehicle": [{
-        "type": "car",
+        "vtype": "car",
         "make": "Koenigsegg",
         "model": "Agera RS",
         "year": "2018",
@@ -14,7 +14,7 @@
         "price": "2500000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "McLaren",
         "model": "P1",
         "year": "2015",
@@ -28,7 +28,7 @@
         "price": "1150000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "McLaren",
         "model": "720S",
         "year": "2020",
@@ -42,7 +42,7 @@
         "price": "284745"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Lamborghini",
         "model": "Aventador",
         "year": "2019",
@@ -56,7 +56,7 @@
         "price": "417826"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Lamborghini",
         "model": "Huracán",
         "year": "2020",
@@ -70,7 +70,7 @@
         "price": "261274"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Ferrari",
         "model": "458 Italia",
         "year": "2015",
@@ -84,7 +84,7 @@
         "price": "239340"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Nissan",
         "model": "GT-R Premium",
         "year": "2020",
@@ -98,7 +98,7 @@
         "price": "113540"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Ford",
         "model": "GT",
         "year": "2020",
@@ -112,7 +112,7 @@
         "price": "1200000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Porsche",
         "model": "911 GT2 RS",
         "year": "2020",
@@ -126,7 +126,7 @@
         "price": "293200"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Ferrari",
         "model": "812 Superfast",
         "year": "2019",
@@ -140,7 +140,7 @@
         "price": "363730"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Bugatti",
         "model": "Chiron",
         "year": "2019",
@@ -154,7 +154,7 @@
         "price": "2998000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Mercedes-Benz",
         "model": "AMG GT-R",
         "year": "2020",
@@ -168,7 +168,7 @@
         "price": "162900"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Ferrari",
         "model": "F8 Tributo",
         "year": "2020",
@@ -182,7 +182,7 @@
         "price": "281048"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Noble",
         "model": "m500",
         "year": "2019",
@@ -196,7 +196,7 @@
         "price": "272400"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Aston Martin",
         "model": "Vantage",
         "year": "2019",
@@ -210,7 +210,7 @@
         "price": "149995"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Ferrari",
         "model": "488 Pista",
         "year": "2019",
@@ -224,7 +224,7 @@
         "price": "350000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Hennessey",
         "model": "Venom F5",
         "year": "2019",
@@ -238,7 +238,7 @@
         "price": "1600000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Tesla",
         "model": "Roadster",
         "year": "2020",
@@ -252,7 +252,7 @@
         "price": "250000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Tesla",
         "model": "Model S P100D",
         "year": "2019",
@@ -266,7 +266,7 @@
         "price": "133000"
     },
     {
-        "type": "car",
+        "vtype": "car",
         "make": "Fiskar",
         "model": "Revero",
         "year": "2019",
@@ -280,7 +280,7 @@
         "price": "169000"
     },
     {
-      "type": "truck",
+      "vtype": "truck",
       "make": "Ford",
       "model": "Raptor",
       "year": "2020",
@@ -294,13 +294,13 @@
       "price": "53455"
     },
     {
-      "type": "truck",
+      "vtype": "truck",
       "make": "Rivian",
       "model": "R1T",
       "year": "2021",
       "top_speed": "120",
       "power": "750",
-      "weight": "",
+      "weight": "2000",
       "image": "https://evcompare.io/upload/resize_cache/iblock/721/1200_800_2/721ca6a8c1cc70d0e696696f91e97d35.jpg",
       "engine": "Electric",
       "torque": "826",
@@ -308,7 +308,7 @@
       "price": "69900"
     },
     {
-      "type": "suv",
+      "vtype": "suv",
       "make": "Lamborghini",
       "model": "Urus",
       "year": "2020",
@@ -322,7 +322,7 @@
       "price": "207326"
     },
     {
-      "type": "suv",
+      "vtype": "suv",
       "make": "Mercedes-AMG",
       "model": "GLS 63",
       "year": "2020",

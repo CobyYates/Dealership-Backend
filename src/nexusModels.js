@@ -16,6 +16,7 @@ const Vehicle = objectType({
     t.model.sixty()
     t.model.topSpeed()
     t.model.weight()  
+    t.model.vtype()  
   }
 });
 

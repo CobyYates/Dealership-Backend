@@ -5,9 +5,9 @@
 scalar DateTime
 
 type Mutation {
-  createVehicle(engine: String, make: String!, model: String!, power: String, price: String, sixty: String, topSpeed: String, torque: String, weight: String, year: String!): Vehicle!
+  createOneVehicle(data: VehicleCreateInput!): Vehicle!
   deleteOneVehicle(where: VehicleWhereUniqueInput!): Vehicle
-  updateVehicle(engine: String, id: ID, make: String, model: String, power: String, price: String, sixty: String, topSpeed: String, torque: String, weight: String, year: String): Vehicle!
+  updateOneVehicle(data: VehicleUpdateInput!, where: VehicleWhereUniqueInput!): Vehicle
 }
 
 type Query {
@@ -27,8 +27,43 @@ type Vehicle {
   topSpeed: String!
   torque: String!
   updatedAt: DateTime!
+  vtype: String!
   weight: String!
   year: String!
+}
+
+input VehicleCreateInput {
+  createdAt: DateTime
+  engine: String!
+  id: String
+  make: String!
+  model: String!
+  power: String!
+  price: String!
+  sixty: String!
+  topSpeed: String!
+  torque: String!
+  updatedAt: DateTime
+  vtype: String!
+  weight: String!
+  year: String!
+}
+
+input VehicleUpdateInput {
+  createdAt: DateTime
+  engine: String
+  id: String
+  make: String
+  model: String
+  power: String
+  price: String
+  sixty: String
+  topSpeed: String
+  torque: String
+  updatedAt: DateTime
+  vtype: String
+  weight: String
+  year: String
 }
 
 input VehicleWhereUniqueInput {
