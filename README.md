@@ -47,11 +47,11 @@ Open the following in your browser
 
 ### Prisma as your data modeling tool
 
-- [See Prisma Code]('./prisma')
+- [See Prisma Code](./prisma)
 
 ### Docker-based PostgreSQL, MySQL, or MongoDB as your data store
 
-One of the scripts specified in the [package.json]('./package.json) file is:
+One of the scripts specified in the [package.json]('./package.json') file is:
 ```javascript
 "launchDocker": "docker run --name pg-docker"
 ```
