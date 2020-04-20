@@ -21,7 +21,7 @@ npm install
 
 ### 2. Run each npm script in package.json in this order
 
- ``` 
+ ```
  npm run launchDocker
  ``` 
  ``` 
@@ -29,18 +29,16 @@ npm install
  ```     
  ``` 
  npm run generate
- ```     
  ``` 
- npm run postinstall
- ```  
  ``` 
  npm run seed
  ```         
+ ### Dev Server
  ``` 
  npm run dev
  ```          
 
-In another terminal tab run
+### In another terminal tab run
 
 ```javascript
 npm run start
@@ -171,11 +169,12 @@ One of the scripts specified in the [package.json](./package.json) file is:
 ```js
 query allVehicles {
    Vehicles{
+    id
     make
     model
     year
     price
-  }
+  }  
 }
 ```
 
@@ -185,20 +184,21 @@ query allVehicles {
 
 ```javascript
 mutation createVehicle {
-  createOneVehicle(
-    data: {
-      vtype: "truck"
-      make: "Ford"
-      model: "Raptor"
-      year: "2020"
-      topSpeed: "107"
-      power: "450"
-      weight: "5508"
-      engine: "V6"
-      torque: "510"
-      sixty: "5.1"
-      price: "53455"
-    }
+  createVehicle(
+    # data: {
+    	vtype: "truck",
+      make: "Ford",
+      model: "Raptor",
+      year: "2020",
+      topSpeed: "107",
+      power: "400",
+      weight: "5508",
+      engine: "V6",
+      torque: "510",
+      sixty: "5.1",
+      price: "53455",
+      image: "test"
+    # }
   ) {
     id
     createdAt
@@ -211,27 +211,28 @@ mutation createVehicle {
 ### Update a vehicle by id
 
 ```javascript
-mutation updateVehicle {
+mutation updateOneVehicle {
   updateOneVehicle(
-    where: { id: "ck8zxk14o0000g4uatar505o1" }
+    where: {id: "ck98yqta90000m0uaz66vmccr"}
     data: {
-      vtype: "truck"
-      make: "Ford"
-      model: "Raptor"
-      year: "2020"
-      topSpeed: "107"
-      power: "450"
-      weight: "5508"
-      engine: "V6"
-      torque: "510"
-      sixty: "5.1"
+      vtype: "truck",
+      make: "Ford",
+      model: "Raptor",
+      year: "2020",
+      topSpeed: "107",
+      power: "450",
+      weight: "5508",
+      engine: "V6",
+      torque: "510",
+      sixty: "5.1",
       price: "53455"
     }
-  ) {
-    createdAt
+  ){
     make
     model
     power
+    createdAt
+    updatedAt
   }
 }
 ```
@@ -240,7 +241,10 @@ mutation updateVehicle {
 
 ```javascript
 mutation deleteVehicle {
-  deleteOneVehicle(where: { id: "ck8zx6h870019scua3gmu7740" }) {
+  deleteOneVehicle(where: {
+    id: "ck98yqta90000m0uaz66vmccr"
+  })
+  {
     id
     make
   }
@@ -251,7 +255,7 @@ mutation deleteVehicle {
 
 ```javascript
 query filterVehicle {
-  Vehicle(id: "ck8zymjtg0000b8uakdhq5p6z") {
+  Vehicle(id: "ck98yqta90000m0uaz66vmccr") {
     make
     model
     year
@@ -265,7 +269,7 @@ query filterVehicle {
 
 ```javascript
 query filterVehicles {
-  Vehicles(searchString: "Ford") {
+  Vehicles(searchString: "truck") {
     make
     model
     year
