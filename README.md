@@ -19,16 +19,26 @@ cd into project
 npm install
 ```
 
-### 2. Run each npm script in package.json
+### 2. Run each npm script in package.json in this order
 
-| Scripts              |
-| -------------------- |
-| ``` npm run launchDocker``` |
-| ``` npm run createDB```     |
-| ``` npm run generate```     |
-| ``` npm run postinstall```  |
-| ``` npm run seed```         |
-| ``` npm run dev```          |
+ ``` 
+ npm run launchDocker
+ ``` 
+ ``` 
+ npm run createDB
+ ```     
+ ``` 
+ npm run generate
+ ```     
+ ``` 
+ npm run postinstall
+ ```  
+ ``` 
+ npm run seed
+ ```         
+ ``` 
+ npm run dev
+ ```          
 
 In another terminal tab run
 
