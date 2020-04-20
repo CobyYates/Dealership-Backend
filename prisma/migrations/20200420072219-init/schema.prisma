@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Vehicle {
+  id        String   @default(cuid()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  make      String
+  image     String
+  model     String
+  year      String
+  price     String
+  power     String
+  torque    String
+  engine    String
+  sixty     String
+  topSpeed  String
+  weight    String
+  vtype     String
+}
