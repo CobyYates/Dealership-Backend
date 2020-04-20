@@ -21,6 +21,7 @@ function loadVehicles() {
         torque: vhcls.torque,
         sixty: vhcls.sixty,
         price: vhcls.price,
+        image: vhcls.image,
         vtype: vhcls.vtype,
       },
     }

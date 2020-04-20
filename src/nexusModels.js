@@ -15,6 +15,7 @@ const Vehicle = objectType({
     t.model.engine()
     t.model.sixty()
     t.model.topSpeed()
+    t.model.image()
     t.model.weight()  
     t.model.vtype()  
   }

@@ -29,7 +29,11 @@ export const Query = queryType({
       resolve: (parent, { searchString }, ctx) => {
         return ctx.prisma.vehicle.findMany({
           where: {
-            OR: [{ make: { contains: searchString } }],
+            OR: [
+              { make: { contains: searchString } },
+              { year: { contains: searchString } },
+              { vtype: { contains: searchString } }
+            ],
           },
         })
       },

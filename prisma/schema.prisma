@@ -12,6 +12,7 @@ model Vehicle {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   make      String
+  image     String
   model     String
   year      String
   price     String
