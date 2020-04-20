@@ -14,8 +14,7 @@ This example shows how to implement a **GraphQL server with JavaScript (Node.js)
 
 Install npm dependencies:
 
-```javascript
-cd into project
+```s
 npm install
 ```
 
@@ -60,6 +59,7 @@ Open the following in your browser
 ### Docker-based PostgreSQL, MySQL, or MongoDB as your data store
 
 One of the scripts specified in the [package.json](./package.json) file is:
+
 ```javascript
 "launchDocker": "docker run --name pg-docker"
 ```
@@ -92,7 +92,11 @@ t.list.field('Vehicles', {
   resolve: (parent, { searchString }, ctx) => {
     return ctx.prisma.vehicle.findMany({
       where: {
-        OR: [{ make: { contains: searchString } }],
+        OR: [
+              { make: { contains: searchString } },
+              { year: { contains: searchString } },
+              { vtype: { contains: searchString } }
+            ],
       },
     })
   },
@@ -109,7 +113,6 @@ Simple form (more work for user)
 export const Mutation = mutationType({
   name: 'Mutation',
   definition(t) {
-    t.crud.createOneVehicle()
     t.crud.updateOneVehicle()
     t.crud.deleteOneVehicle()
   },
