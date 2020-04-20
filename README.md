@@ -23,12 +23,12 @@ npm install
 
 | Scripts              |
 | -------------------- |
-| npm run launchDocker |
-| npm run createDB     |
-| npm run generate     |
-| npm run postinstall  |
-| npm run seed         |
-| npm run dev          |
+| ``` npm run launchDocker``` |
+| ``` npm run createDB```     |
+| ``` npm run generate```     |
+| ``` npm run postinstall```  |
+| ``` npm run seed```         |
+| ``` npm run dev```          |
 
 In another terminal tab run
 
