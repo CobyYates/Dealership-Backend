@@ -2,7 +2,7 @@
   "name": "javascript-graphql",
   "scripts": {
     "nuke": "docker stop dealer-docker && docker rm dealer-docker && docker volume rm -f dealer-docker && rm -rf prisma/migrations",
-    "launchDocker": "docker run --name dealer-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v pgdata:/var/lib/postgresql/data postgres:latest",
+    "launchDocker": "docker run --name dealer-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v dealerdata:/var/lib/postgresql/data postgres:latest",
     "createDB": "npx prisma2 migrate save --name 'init' --experimental && npx prisma2 migrate up --experimental",
     "generate": "npx prisma2 generate",
     "postinstall": "npm -s run generate",

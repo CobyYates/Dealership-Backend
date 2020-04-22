@@ -66,7 +66,7 @@ One of the scripts specified in the [package.json](./package.json) file is:
 
 ### At least 3 Query resolvers to get data from your server
 
-<Details><Summary><strong>See Query's</strong></Summary>
+<Details><Summary><strong>See Mutations's</strong></Summary>
 
 ```js
 t.field('Vehicle', {
@@ -120,7 +120,7 @@ export const Mutation = mutationType({
 ```
 
 More specific Mutation
-<Details><Summary><strong>See Query's</strong></Summary>
+<Details><Summary><strong>See Mutations's</strong></Summary>
 
 ```javascript
 export const Mutation = mutationType({
@@ -185,10 +185,9 @@ query allVehicles {
 
 ### Create a single vehicle
 
-```javascript
+```graphql
 mutation createVehicle {
   createVehicle(
-    # data: {
     	vtype: "truck",
       make: "Ford",
       model: "Raptor",
@@ -201,7 +200,6 @@ mutation createVehicle {
       sixty: "5.1",
       price: "53455",
       image: "test"
-    # }
   ) {
     id
     createdAt
@@ -213,7 +211,7 @@ mutation createVehicle {
 
 ### Update a vehicle by id
 
-```javascript
+```graphql
 mutation updateOneVehicle {
   updateOneVehicle(
     where: {id: "ck98yqta90000m0uaz66vmccr"}
@@ -242,7 +240,7 @@ mutation updateOneVehicle {
 
 ### Delete a single vehicle by id
 
-```javascript
+```graphql
 mutation deleteVehicle {
   deleteOneVehicle(where: {
     id: "ck98yqta90000m0uaz66vmccr"
@@ -256,7 +254,7 @@ mutation deleteVehicle {
 
 ### Find one vehicle by id
 
-```javascript
+```graphql
 query filterVehicle {
   Vehicle(id: "ck98yqta90000m0uaz66vmccr") {
     make
@@ -270,7 +268,7 @@ query filterVehicle {
 
 ### Search by any type of make
 
-```javascript
+```graphql
 query filterVehicles {
   Vehicles(searchString: "truck") {
     make
